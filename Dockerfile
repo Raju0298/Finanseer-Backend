@@ -2,10 +2,10 @@
 FROM node:16
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /src
 
 # Copy the application files into the working directory
-COPY . /app
+COPY . /src
 
 # Install the application dependencies
 RUN npm install

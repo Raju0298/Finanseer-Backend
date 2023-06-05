@@ -1,17 +1,16 @@
-# Base image
-FROM node:16.15.1-alpine
+FROM node:16
 
-# Set the working directory in the container
-WORKDIR /app
+# Create app directory
+WORKDIR /
 
-# Copy the application files into the working directory
-COPY . /app
+#Copy app sourcecode
+COPY . . 
 
-# Install the application dependencies
+# install dependencies
 RUN npm install
 
 #Expose on port 3000
-EXPOSE 8080
+EXPOSE 3000
 
-# Define the entry point for the container
-CMD ["npm", "run", "dev"]
+# This is the command to run the app
+CMD [ "node", "index.js"]

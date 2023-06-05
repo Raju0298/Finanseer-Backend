@@ -9,8 +9,8 @@ COPY . .
 # install dependencies
 RUN npm install
 
-#Expose on port 3000
-EXPOSE 3000
+#Expose on port 8080
+EXPOSE 8080
 
 # This is the command to run the app
 CMD [ "node", "index.js"]

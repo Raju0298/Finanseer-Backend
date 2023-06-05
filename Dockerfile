@@ -1,17 +1,14 @@
 # Base image
 FROM node:16.15.1-alpine
 
-# Set the working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Copy the application files into the working directory
+COPY . /app
 
-# Install dependencies
+# Install the application dependencies
 RUN npm install
 
-# Copy the rest of the application code
-COPY . .
-
-# Start the application with nodemon
-CMD ["npm", "run", "dev"]
+# Define the entry point for the container
+CMD ["npm", "start"]

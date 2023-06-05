@@ -2,7 +2,7 @@
 FROM node:16.15.1-alpine
 
 # Set the working directory
-WORKDIR /src
+WORKDIR /app/index.js
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
